@@ -1,0 +1,25 @@
+{
+  "name": "restmen",
+  "version": "0.0.1",
+  "description": "The REST api stub service based on Mongo Express Node (MEN)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vadim-sky/restmen.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Rest",
+    "API"
+  ],
+  "author": "vadim-sky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vadim-sky/restmen/issues"
+  },
+  "homepage": "https://github.com/vadim-sky/restmen#readme"
+}
