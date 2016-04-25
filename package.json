@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/vadim-sky/restmen/issues"
   },
-  "homepage": "https://github.com/vadim-sky/restmen#readme"
+  "homepage": "https://github.com/vadim-sky/restmen#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.13",
+    "node-restful": "^0.2.5"
+  }
 }
