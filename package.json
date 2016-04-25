@@ -25,7 +25,20 @@
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "gulpfile.ts": "0.0.2",
     "mongoose": "^4.4.13",
     "node-restful": "^0.2.5"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^5.4.0",
+    "grunt-tslint": "^3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-tsd-files": "^0.1.2",
+    "tslint": "^3.8.1",
+    "tslint-eslint-rules": "^1.2.0",
+    "typescript": "^1.8.10"
   }
 }
