@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
         ts: {
             build: {
-                src: ["server.ts", "!node_modules/**/*.ts"],
+                src: ["server.ts", 'gulpfile.ts', "!node_modules/**/*.ts"],
                 // Avoid compiling TypeScript files in node_modules
                 options: {
                     module: 'commonjs',
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['server.ts', '!node_modules/**/*.ts'], // the watched files
+                files: ['server.ts', 'gulpfile.ts', '!node_modules/**/*.ts'], // the watched files
                 tasks: ["tslint:all", "ts:build"], // the task to run
                 options: {
                     spawn: false // makes the watch task faster

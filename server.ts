@@ -1,14 +1,17 @@
 /**
  * Created by user on 25/04/2016.
  */
+/// <reference path="typings/node/node.d.ts" />
+/// <reference path="typings/express/express.d.ts" />
 import * as express from 'express';
-const app = express(); // 1
+const app = express();
 
-app.get('/', (req, res) => res.send('Hello from Express')); // 2
-app.get('/products', (req, res) => res.send('Got a request for products')); // 2
-app.get('/reviews', (req, res) => res.send('Got a request for reviews')); // 2
+app.get('/', (req, res) => res.send('Hello from Express'));
+app.get('/products', (req, res) => res.send('Got a request for products'));
+app.get('/reviews', (req, res) => res.send('Got a request for reviews'));
 
-const server = app.listen(8000, 'localhost', () => { // 3
-   const {address, port} = server.address(); // 4
-   console.log('Listening on http://localhost:' + port + address);
+let port: number = +process.env.PORT || 3000;
+const server = app.listen(port, 'localhost', () => {
+    const {address, port} = server.address();
+    console.log('Listening on http://' + address +':' + port);
 });

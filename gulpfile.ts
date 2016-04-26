@@ -1,6 +1,8 @@
 import {Gulpclass, Task, SequenceTask} from "gulpfile.ts/Annotations";
+const gulp = require('gulp'),
+    ts = require('gulp-typescript');
 
-const gulp = require("gulp");
+// const gulp = require("gulp");
 
 let del: any = require('del'); // you probably want to define a classes that does not have type definition this way 
 
