@@ -25,7 +25,10 @@
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "express-jwt-auth": "0.0.6",
     "gulpfile.ts": "0.0.2",
+    "jwt-simple": "^0.5.0",
+    "mongodb": "^2.1.17",
     "mongoose": "^4.4.13",
     "node-restful": "^0.2.5"
   },
