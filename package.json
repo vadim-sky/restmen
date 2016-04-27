@@ -27,6 +27,7 @@
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "express-jwt-auth": "0.0.6",
+    "grunt-contrib-uglify": "1.0.1",
     "gulpfile.ts": "0.0.2",
     "jsonwebtoken": "^5.7.0",
     "jwt-simple": "^0.5.0",
