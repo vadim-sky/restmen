@@ -4,7 +4,8 @@
   "description": "The REST api stub service based on Mongo Express Node (MEN)",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start":"node build/server.js"
   },
   "repository": {
     "type": "git",

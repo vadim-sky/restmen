@@ -6,7 +6,7 @@ module.exports = function (grunt) {
         ts: {
             build: {
                 src: ["server.ts", 'gulpfile.ts', "!node_modules/**/*.ts"],
-                dest: 'bundle',
+                dest: 'build',
 
                 // Avoid compiling TypeScript files in node_modules
                 options: {
