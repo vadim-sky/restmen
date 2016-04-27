@@ -2,10 +2,9 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         ts: {
             build: {
-                src: ["server.ts", 'gulpfile.ts', "!node_modules/**/*.ts"],
+                src: ["server.ts", 'gulpfile.ts', "!node_modules/**/*.ts", "app/**/*.ts"],
                 dest: 'build',
 
                 // Avoid compiling TypeScript files in node_modules
@@ -19,7 +18,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['server.ts', 'gulpfile.ts', '!node_modules/**/*.ts'], // the watched files
+                files: ['server.ts', 'gulpfile.ts', '!node_modules/**/*.ts', "app/**/*.ts"], // the watched files
                 tasks: ["tslint:all", "ts:build"], // the task to run
                 options: {
                     spawn: false // makes the watch task faster
@@ -34,15 +33,26 @@ module.exports = function (grunt) {
                 src: ["server.ts", "!node_modules/**/*.ts", "!obj/**/*.ts", "!typings/**/*.ts"]
                 // avoid linting typings files and node_modules files
             }
+        },
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'build/app/**/*.js',
+                dest: 'bin/bundle.min.js'
+            }
         }
     });
 
     grunt.loadNpmTasks("grunt-ts");
     grunt.loadNpmTasks("grunt-tslint");
     grunt.loadNpmTasks("grunt-contrib-watch");
-
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default tasks.
     grunt.registerTask('default', ["ts:build"]);
     grunt.registerTask('default', ["tslint:all", "ts:build"]);
+    grunt.registerTask('default', ["ts:build", 'uglify']);
+
 };

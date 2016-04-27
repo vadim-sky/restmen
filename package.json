@@ -4,7 +4,9 @@
   "description": "The REST api stub service based on Mongo Express Node (MEN)",
   "main": "server.js",
   "scripts": {
+    "postinstall": "tsd install",
     "test": "test",
+    "build": "grunt ts:build",
     "start": "node build/server.js"
   },
   "repository": {
@@ -24,9 +26,11 @@
   },
   "homepage": "https://github.com/vadim-sky/restmen#readme",
   "dependencies": {
+    "lodash": "^4.11.2",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "express-jwt-auth": "0.0.6",
+    "grunt-contrib-uglify": "1.0.1",
     "gulpfile.ts": "0.0.2",
     "jsonwebtoken": "^5.7.0",
     "jwt-simple": "^0.5.0",

@@ -1,5 +1,5 @@
 {
-"outDir": "dist",
+"outDir": "build",
 "sourceMap": true,
 "declaration": false
 }
