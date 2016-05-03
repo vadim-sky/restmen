@@ -9,6 +9,7 @@ module.exports = function (grunt) {
 
                 // Avoid compiling TypeScript files in node_modules
                 options: {
+                    target: "ES5",
                     module: 'commonjs',
                     // To compile TypeScript using external modules like NodeJS
                     fast: 'never'

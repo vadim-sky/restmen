@@ -7,7 +7,8 @@
     "postinstall": "tsd install",
     "test": "test",
     "build": "grunt ts:build",
-    "start": "node build/server.js"
+    "start": "node build/server.js",
+    "start prod": "node bin/bundle.min.js"
   },
   "repository": {
     "type": "git",

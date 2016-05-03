@@ -1,5 +1,9 @@
 {
-"outDir": "build",
-"sourceMap": true,
-"declaration": false
+  "compilerOptions": {
+    "target": "ES6"
+  },
+
+  "outDir": "build",
+  "sourceMap": true,
+  "declaration": false
 }
