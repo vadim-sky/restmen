@@ -24,6 +24,9 @@ install typescript:
 
 >tsd install node --save
 
+### tests
+nmp install mocha -g
+
 TODO: move to post install
 >tsd install express --save
 

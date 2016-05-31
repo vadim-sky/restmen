@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "postinstall": "tsd install",
-    "test": "test",
+    "test": "./node_modules/.bin/mocha  app/**/tests/*.spec.js --colors --recursive",
     "build": "grunt ts:build",
     "start": "node build/server.js"
   },
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/vadim-sky/restmen#readme",
   "dependencies": {
-    "lodash": "^4.11.2",
+    "assert": "^1.4.0",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "express-jwt-auth": "0.0.6",
@@ -34,6 +34,7 @@
     "gulpfile.ts": "0.0.2",
     "jsonwebtoken": "^5.7.0",
     "jwt-simple": "^0.5.0",
+    "lodash": "^4.11.2",
     "mongodb": "^2.1.17",
     "mongoose": "^4.4.13",
     "morgan": "^1.7.0",
@@ -48,6 +49,7 @@
     "gulp": "^3.9.1",
     "gulp-tsd-files": "^0.1.2",
     "gulpclass": "^0.1.0",
+    "mocha": "^2.5.3",
     "tsd": "^0.6.5",
     "tslint": "^3.8.1",
     "tslint-eslint-rules": "^1.2.0",
