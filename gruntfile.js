@@ -2,7 +2,6 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         ts: {
             build: {
                 src: ["app/server.ts", 'gulpfile.ts', "!node_modules/**/*.ts", "app/**/*.ts"],
@@ -11,7 +10,7 @@ module.exports = function (grunt) {
                 // Avoid compiling TypeScript files in node_modules
                 options: {
                     target: "es6",
-                    module: 'es6',
+                    module: 'commonjs',
                     // To compile TypeScript using external modules like NodeJS
                     fast: 'never'
                     // You'll need to recompile all the files each time for NodeJS
@@ -21,7 +20,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['app/server.ts', 'gulpfile.ts', '!node_modules/**/*.ts', "app/**/*.ts"], // the watched files
-                tasks: ['jshint', 'tslint:all', 'ts:build'], // the task to run
+                tasks: ["tslint:all", "ts:build"], // the task to run
                 options: {
                     spawn: false // makes the watch task faster
                 }
@@ -44,9 +43,8 @@ module.exports = function (grunt) {
                 src: 'build/app/**/*.js',
                 dest: 'bin/bundle.min.js'
             }
-        },
+        }
     });
-
 
     grunt.loadNpmTasks("grunt-ts");
     grunt.loadNpmTasks("grunt-tslint");
@@ -57,6 +55,5 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ["ts:build"]);
     grunt.registerTask('default', ["tslint:all", "ts:build"]);
     grunt.registerTask('default', ["ts:build", 'uglify']);
-
 
 };
