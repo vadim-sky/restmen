@@ -2,15 +2,16 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
         ts: {
             build: {
-                src: ["src/server.ts", 'gulpfile.ts', "!node_modules/**/*.ts", "app/**/*.ts"],
+                src: ["app/server.ts", 'gulpfile.ts', "!node_modules/**/*.ts", "app/**/*.ts"],
                 dest: 'build',
 
                 // Avoid compiling TypeScript files in node_modules
                 options: {
                     target: "es6",
-                    module: 'commonjs',
+                    module: 'es6',
                     // To compile TypeScript using external modules like NodeJS
                     fast: 'never'
                     // You'll need to recompile all the files each time for NodeJS
@@ -19,8 +20,8 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['src/server.ts', 'gulpfile.ts', '!node_modules/**/*.ts', "app/**/*.ts"], // the watched files
-                tasks: ["tslint:all", "ts:build"], // the task to run
+                files: ['app/server.ts', 'gulpfile.ts', '!node_modules/**/*.ts', "app/**/*.ts"], // the watched files
+                tasks: ['jshint', 'tslint:all', 'ts:build'], // the task to run
                 options: {
                     spawn: false // makes the watch task faster
                 }
@@ -31,7 +32,7 @@ module.exports = function (grunt) {
                 configuration: grunt.file.readJSON("tslint.json")
             },
             all: {
-                src: ["src/server.ts", "!node_modules/**/*.ts", "!obj/**/*.ts", "!typings/**/*.ts"]
+                src: ["app/server.ts", "!node_modules/**/*.ts", "!obj/**/*.ts", "!typings/**/*.ts"]
                 // avoid linting typings files and node_modules files
             }
         },
@@ -43,8 +44,9 @@ module.exports = function (grunt) {
                 src: 'build/app/**/*.js',
                 dest: 'bin/bundle.min.js'
             }
-        }
+        },
     });
+
 
     grunt.loadNpmTasks("grunt-ts");
     grunt.loadNpmTasks("grunt-tslint");
@@ -55,5 +57,6 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ["ts:build"]);
     grunt.registerTask('default', ["tslint:all", "ts:build"]);
     grunt.registerTask('default', ["ts:build", 'uglify']);
+
 
 };

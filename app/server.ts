@@ -1,17 +1,19 @@
 /**
  * Created by user on 25/04/2016.
  */
-
 /// <reference path="../typings/node/node.d.ts" />
 /// <reference path="../typings/express/express.d.ts" />
 
 import * as express from 'express';
+import {log, notfound} from './middleware/logger';
+
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello from Express'));
-// app.get('/products', (req, res) => res.send('Got a request for products'));
-// app.get('/reviews', (req, res) => res.send('Got a request for reviews'));
-//
+app.use('/', log);
+// app.get('/', (req, res) => res.send('Hello from Express'));
+
+app.get('/notfound', (req, res) => res.send('Invalid request'));
+app.use('/', notfound);
 
 let port: number = +process.env.PORT || 3000;
 const server = app.listen(port, 'localhost', () => {
