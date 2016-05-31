@@ -22,9 +22,9 @@
   "author": "vadim-sky",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vadim-sky/restmen/issues"
+    "url": "https://github.com/vadim-sky/ts-restmen/issues"
   },
-  "homepage": "https://github.com/vadim-sky/restmen#readme",
+  "homepage": "https://github.com/vadim-sky/ts-restmen#readme",
   "dependencies": {
     "assert": "^1.4.0",
     "body-parser": "^1.15.0",
