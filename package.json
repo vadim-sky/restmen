@@ -50,6 +50,7 @@
     "gulp": "^3.9.1",
     "gulp-tsd-files": "^0.1.2",
     "gulpclass": "^0.1.0",
+    "istanbul": "^0.4.3",
     "jshint-stylish": "^2.2.0",
     "mocha": "^2.5.3",
     "tsd": "^0.6.5",
