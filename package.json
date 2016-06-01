@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "postinstall": "tsd install",
-    "test": "./node_modules/.bin/mocha  app/**/tests/*.spec.js --colors --recursive",
+    "test": "./node_modules/.bin/mocha  app/**/*.spec.js --colors --recursive",
     "build": "grunt ts:build",
     "start": "node build/server.js"
   },
@@ -50,6 +50,7 @@
     "gulp": "^3.9.1",
     "gulp-tsd-files": "^0.1.2",
     "gulpclass": "^0.1.0",
+    "jshint-stylish": "^2.2.0",
     "mocha": "^2.5.3",
     "tsd": "^0.6.5",
     "tslint": "^3.8.1",
