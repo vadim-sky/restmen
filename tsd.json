@@ -6,34 +6,58 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "express/express.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "mime/mime.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "serve-static/serve-static.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "node/node.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "express-serve-static-core/express-serve-static-core.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "body-parser/body-parser.d.ts": {
-      "commit": "2d448c0a3152e8871521848c5c2c61ab4e2a2cc9"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "mongodb/mongodb.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "jwt-simple/jwt-simple.d.ts": {
-      "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "gulp/gulp.d.ts": {
-      "commit": "08ed4e9f1869e37e29514d862e0158b40e550232"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     },
     "orchestrator/orchestrator.d.ts": {
-      "commit": "08ed4e9f1869e37e29514d862e0158b40e550232"
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "assertion-error/assertion-error.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "chai/chai.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "q/Q.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "morgan/morgan.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "passport/passport.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "passport-jwt/passport-jwt.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
+    },
+    "passport-strategy/passport-strategy.d.ts": {
+      "commit": "26a1f8c44f5fe76168df717020bfb93839b63db3"
     }
   }
 }

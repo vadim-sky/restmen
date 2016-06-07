@@ -1,3 +1,5 @@
+/// <reference path="../../../../typings/mocha/mocha.d.ts" />
+
 describe ("Users Service", function() {
     it('Should be return the index when present', function() {
         // ...

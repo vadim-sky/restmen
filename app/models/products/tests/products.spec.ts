@@ -1,3 +1,5 @@
+/// <reference path="../../../../typings/mocha/mocha.d.ts" />
+
 describe ("Products ", function() {
     it('Product should be return the index when present', function() {
         // ...
