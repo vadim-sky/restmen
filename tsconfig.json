@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "compilerOptions": {
     "target": "ES6"
   },
@@ -6,4 +7,19 @@
   "outDir": "build",
   "sourceMap": true,
   "declaration": false
+=======
+  "outDir": "build",
+  "sourceMap": true,
+  "declaration": false,
+
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  }
+>>>>>>> master
 }
